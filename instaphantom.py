@@ -5,6 +5,7 @@ from pyfiglet import Figlet
 def options():
 	print("\n\n\n____________ Options Menu ____________\n")
 	print("options:   Print this menu")
+	print("account:   Change account username and password")
 	print("login:   Logging into your account")
 	print("target:   Setting the target user")
 	print("profile:   Download the target profile picture and some usefull things")
@@ -26,6 +27,13 @@ def login(loader):
 	except instaloader.exceptions.BadCredentialsException:
 		print("Error: Wrong password\n")
 		return ""
+
+def changeAccount():
+	username = input("Enter your account's username: ")
+	password = input("Enter your account's password: ")
+	file = open("account.txt", "w")
+	file.write("username=" + username + "\npassword=" + password)
+	file.close()
 
 def setTarget():
 	target = input("Enter target's username: ")
@@ -98,7 +106,7 @@ print("/////////////////////////////////////////////////////////////////////////
 
 print("Enter \"options\" to show the options.\nAll files that will be downloaded, will be stored to the \"output\" directory\n\n\n")
 #Run the program
-commands = ["options", "login", "target", "profile", "bio", "followers", "followees"]
+commands = ["options", "login", "target", "profile", "bio", "followers", "followees", "account"]
 running = True
 user = ""
 target = ""
@@ -112,6 +120,8 @@ while running:
 		user = login(loader)
 	elif command == commands[2]:
 		target = setTarget()
+	elif command == commands[7]:
+		changeAccount()
 	elif command in commands and user != "" and target != "":
 		if command == commands[3]:
 			profile(loader, target)
