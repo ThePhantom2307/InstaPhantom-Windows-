@@ -1,5 +1,5 @@
 # InstaPhantom
-InstaPhantom is a script program created for linux that is used to get some usefull information about a user on instagram
+InstaPhantom is a script created for linux that is used to get some usefull information about a user on instagram
 
 # How to setup
 1) double click on "setup.py" file
