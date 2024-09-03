@@ -1,13 +1,6 @@
 import os
 import sys
 
-userdata = open("account.txt", "w")
-username = input("Enter username: ")
-password = input("Enter password: ")
-userdata.write("username=" + username + "\n")
-userdata.write("password=" + password)
-userdata.close()
-
 install_instaloader = "python -m pip install instaloader"
 install_pyfiglet = "python -m pip install pyfiglet"
 
