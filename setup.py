@@ -17,5 +17,4 @@ print("\n" + install_pyfiglet)
 os.system(install_pyfiglet)
 os.system("mkdir output")
 
-print("\n\nIf you like to change the username and the password that you entered, you can do it by editing \"account\" file!")
 input("\nInstaPhantom is ready for use! Press \"Enter\" to continue.")
